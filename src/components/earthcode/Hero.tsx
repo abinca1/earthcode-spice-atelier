@@ -111,7 +111,7 @@ export function Hero() {
       <div aria-hidden className="absolute inset-0 z-0">
         {/* Black peppercorn branch drops from the top right */}
         <motion.div
-          className="absolute right-[7%] top-[14%] sm:right-[8%]"
+          className="absolute right-[6%] top-[7%] sm:right-[8%] sm:top-[14%]"
           style={{ x: pepperX, y: pepperY }}
         >
           <motion.img
@@ -119,7 +119,7 @@ export function Hero() {
             alt=""
             width={1024}
             height={1024}
-            className="h-auto w-[26vw] max-w-[300px] rotate-[9deg] drop-shadow-2xl sm:w-[19vw]"
+            className="h-auto w-[24vw] max-w-[300px] rotate-[9deg] drop-shadow-2xl sm:w-[19vw]"
             initial={{ y: -780, opacity: 0, rotate: 26 }}
             animate={{ y: 0, opacity: 1, rotate: 9 }}
             transition={{ ...LUXURY_SPRING, delay: 0.95 }}
@@ -140,7 +140,7 @@ export function Hero() {
               alt=""
               width={1024}
               height={1024}
-              className="h-auto w-[62vw] drop-shadow-2xl sm:w-[34vw]"
+              className="h-auto w-[30vw] drop-shadow-2xl sm:w-[34vw]"
               initial={{ x: -740, opacity: 0, rotate: -20 }}
               animate={{ x: 0, opacity: 1, rotate: -5 }}
               transition={{ ...LUXURY_SPRING, delay: 0.72 }}
@@ -151,7 +151,7 @@ export function Hero() {
 
       {/* Copy block */}
       <motion.div
-        className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-7xl flex-col justify-center px-6 pb-24 pt-32 sm:px-14 lg:max-w-3xl lg:px-16"
+        className="relative z-20 mx-auto flex min-h-[100svh] w-full max-w-7xl flex-col justify-center px-6 pb-24 pt-32 sm:px-14 lg:max-w-3xl lg:px-16"
         style={{ x: copyX }}
       >
         <motion.p
