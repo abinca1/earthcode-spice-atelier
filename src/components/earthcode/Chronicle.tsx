@@ -48,7 +48,7 @@ function PepperFall({
   boost: MotionValue<number>;
 }) {
   const fall = useTransform(progress, [p.s, p.e], [-340, 1750]);
-  const y = useTransform([fall, boost], ([f, b]: number[]) => f + b * p.factor);
+  const y = useTransform([fall, boost], ([f = 0, b = 0]: number[]) => f + b * p.factor);
   const rotate = useTransform(progress, [p.s, p.e], [p.rot, p.rot + 280]);
   const opacity = useTransform(
     progress,
