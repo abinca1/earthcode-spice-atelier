@@ -134,7 +134,7 @@ export function Hero() {
               alt=""
               width={1024}
               height={1024}
-              className="h-auto w-[62vw] drop-shadow-2xl sm:w-[38vw]"
+              className="h-auto w-[62vw] drop-shadow-2xl sm:w-[34vw]"
               initial={{ x: -740, opacity: 0, rotate: -20 }}
               animate={{ x: 0, opacity: 1, rotate: -5 }}
               transition={{ ...LUXURY_SPRING, delay: 0.72 }}
