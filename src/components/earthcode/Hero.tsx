@@ -211,7 +211,7 @@ export function Hero() {
           {[
             ["8 mm", "Queen-grade pods"],
             ["570 g/L", "Pepper density"],
-            ["1,100 m", "Single-estate altitude"],
+            ["1,100 m", "Estate altitude"],
           ].map(([value, label]) => (
             <div key={label}>
               <dt className="sr-only">{label}</dt>
