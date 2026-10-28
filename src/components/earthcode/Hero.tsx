@@ -145,7 +145,7 @@ export function Hero() {
 
       {/* Copy block */}
       <motion.div
-        className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-7xl flex-col justify-center px-6 pb-24 pt-32 sm:px-14 lg:px-20"
+        className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-7xl flex-col justify-center px-6 pb-24 pt-32 sm:px-14 lg:max-w-3xl lg:px-16"
         style={{ x: copyX }}
       >
         <motion.p
@@ -157,7 +157,7 @@ export function Hero() {
           Earthcode Naturals · Single Origin · Est. 2026
         </motion.p>
 
-        <h1 className="mt-7 font-serif text-[clamp(2.7rem,6.6vw,6rem)] leading-[1.02] text-emerald-deep">
+        <h1 className="mt-7 font-serif text-[clamp(2.5rem,5.2vw,4.8rem)] leading-[1.05] text-emerald-deep">
           <span className="sr-only">The Monarchs of Spice: Cardamom and Black Gold</span>
           <span aria-hidden>
             <SplitLine text={LINE_1} delay={0.95} />
