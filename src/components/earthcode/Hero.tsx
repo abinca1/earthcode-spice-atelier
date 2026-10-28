@@ -24,22 +24,28 @@ function SplitLine({
   delay: number;
   className?: string;
 }) {
+  const words = text.split(" ");
+  let charIndex = 0;
   return (
     <span className={cn("block", className)}>
-      {Array.from(text).map((ch, i) => (
-        <span
-          key={i}
-          aria-hidden
-          className="-mb-[0.14em] inline-block overflow-hidden pb-[0.14em] align-top"
-        >
-          <motion.span
-            className="inline-block will-change-transform"
-            initial={{ y: "118%" }}
-            animate={{ y: "0%" }}
-            transition={{ ...LUXURY_SPRING, delay: delay + i * 0.028 }}
-          >
-            {ch === " " ? "\u00A0" : ch}
-          </motion.span>
+      {words.map((word, w) => (
+        <span key={w} aria-hidden className="inline-block whitespace-nowrap">
+          {Array.from(word).map((ch, i) => (
+            <span
+              key={i}
+              className="-mb-[0.14em] inline-block overflow-hidden pb-[0.14em] align-top"
+            >
+              <motion.span
+                className="inline-block will-change-transform"
+                initial={{ y: "118%" }}
+                animate={{ y: "0%" }}
+                transition={{ ...LUXURY_SPRING, delay: delay + charIndex++ * 0.028 }}
+              >
+                {ch}
+              </motion.span>
+            </span>
+          ))}
+          {w < words.length - 1 ? "\u00A0" : null}
         </span>
       ))}
     </span>
@@ -197,7 +203,7 @@ export function Hero() {
         </motion.div>
 
         <motion.dl
-          className="mt-14 flex flex-wrap gap-x-12 gap-y-6"
+          className="mt-14 hidden flex-wrap gap-x-12 gap-y-6 sm:flex"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2.1, duration: 0.9 }}
