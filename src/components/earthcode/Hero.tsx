@@ -105,7 +105,7 @@ export function Hero() {
       <div aria-hidden className="absolute inset-0 z-0">
         {/* Black peppercorn branch drops from the top right */}
         <motion.div
-          className="absolute right-[2%] top-[4%] sm:right-[7%] sm:top-[9%]"
+          className="absolute right-[7%] top-[14%] sm:right-[8%]"
           style={{ x: pepperX, y: pepperY }}
         >
           <motion.img
@@ -113,7 +113,7 @@ export function Hero() {
             alt=""
             width={1024}
             height={1024}
-            className="h-[26vh] w-auto rotate-[9deg] drop-shadow-2xl sm:h-[34vh]"
+            className="h-auto w-[26vw] max-w-[300px] rotate-[9deg] drop-shadow-2xl sm:w-[19vw]"
             initial={{ y: -780, opacity: 0, rotate: 26 }}
             animate={{ y: 0, opacity: 1, rotate: 9 }}
             transition={{ ...LUXURY_SPRING, delay: 0.95 }}
@@ -122,7 +122,7 @@ export function Hero() {
 
         {/* Gigantic cardamom pod slides in from the left */}
         <motion.div
-          className="absolute bottom-[2%] right-[6%] sm:bottom-[6%] sm:right-[11%]"
+          className="absolute bottom-[3%] right-[4%] sm:bottom-[7%] sm:right-[5%]"
           style={{ x: podX, y: podY }}
         >
           <motion.div
@@ -134,7 +134,7 @@ export function Hero() {
               alt=""
               width={1024}
               height={1024}
-              className="h-[38vh] w-auto drop-shadow-2xl sm:h-[54vh]"
+              className="h-auto w-[62vw] drop-shadow-2xl sm:w-[38vw]"
               initial={{ x: -740, opacity: 0, rotate: -20 }}
               animate={{ x: 0, opacity: 1, rotate: -5 }}
               transition={{ ...LUXURY_SPRING, delay: 0.72 }}
